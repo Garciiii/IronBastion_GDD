@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac8d09dc7cb0ef40874275c2db0d444, type: 3}
+  m_Name: TowerData_Cannon
+  m_EditorClassIdentifier: IronBastion::TowerData
+  towerName: "Canh\xE3o"
+  description: 
+  prefab: {fileID: 855184545414069151, guid: 6fb174568e348154f8708f7e97dcb99b, type: 3}
+  icon: {fileID: 0}
+  cost: 150
+  upgradeCost: 75
+  damageLevel1: 80
+  rangeLevel1: 3
+  fireRateLevel1: 0.6
+  damageLevel2: 110
+  rangeLevel2: 3.5
+  fireRateLevel2: 0.8
+  splashRadiusLevel1: 1.2
+  splashRadiusLevel2: 1.8
+  slowPercentLevel1: 0
+  slowPercentLevel2: 0
+  slowDuration: 0.7
+  slowPulseInterval: 0.5
+  dotDamagePerSecLevel1: 0
+  dotDamagePerSecLevel2: 0
+  dotDurationLevel1: 0
+  dotDurationLevel2: 0
+  synergyRadius: 2.5
+  defaultTargeting: 0
+  projectilePrefab: {fileID: 9075479851767718195, guid: 626e784caf3790c49b98e3c292c465ef, type: 3}
+  projectileSpeed: 10

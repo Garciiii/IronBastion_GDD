@@ -1,0 +1,20 @@
+{
+    "name": "IronBastion.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ab662e49b05b0ce41ae9256f652a7a73",
+        "Unity.TextMeshPro",
+        "UnityEngine.UI"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
