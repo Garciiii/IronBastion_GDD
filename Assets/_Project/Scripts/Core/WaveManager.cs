@@ -111,6 +111,12 @@ public class WaveManager : MonoBehaviour
         if (_currentWaveIndex >= TotalWaves) return;
 
         WaveData currentWave = waves[_currentWaveIndex];
+        if (currentWave == null)
+        {
+            Debug.LogError("[WaveManager] waves[" + _currentWaveIndex + "] e null. " +
+                           "Arrasta WaveData_Wave1/2/3 para o array Waves no Inspector do WaveManager.");
+            return;
+        }
         _enemiesAliveInWave = currentWave.GetTotalEnemyCount();
         _enemiesReachedBaseInWave = 0;
         _waveGoldEarned = 0;

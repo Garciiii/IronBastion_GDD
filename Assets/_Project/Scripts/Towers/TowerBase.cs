@@ -41,6 +41,12 @@ public class TowerBase : MonoBehaviour
     [Tooltip("Ponto 3D de onde os projéteis são disparados.")]
     protected Transform firePoint;
 
+    [Header("Modelo 3D — Rotação")]
+    [SerializeField]
+    [Tooltip("Transform da cabeça/canhão do turret (só a cabeça roda). " +
+             "Se vazio, o GameObject inteiro roda em direção ao alvo (comportamento de fallback).")]
+    private Transform turretHead;
+
     [Header("Targeting")]
     [SerializeField]
     [Tooltip("Modo de targeting inicial desta torre.")]
@@ -244,11 +250,27 @@ public class TowerBase : MonoBehaviour
         Vector3 dir = (_currentTarget.transform.position - transform.position);
         dir.y = 0f;
         if (dir == Vector3.zero) return;
-        transform.rotation = Quaternion.Slerp(
-            transform.rotation,
-            Quaternion.LookRotation(dir),
-            Time.deltaTime * 10f
-        );
+
+        Quaternion targetRot = Quaternion.LookRotation(dir);
+
+        // Se o turret tem cabeça separada (modelo 3D importado), só roda a cabeça.
+        // Caso contrário, roda o GameObject inteiro (fallback para primitivos).
+        if (turretHead != null)
+        {
+            turretHead.rotation = Quaternion.Slerp(
+                turretHead.rotation,
+                targetRot,
+                Time.deltaTime * 8f
+            );
+        }
+        else
+        {
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation,
+                targetRot,
+                Time.deltaTime * 10f
+            );
+        }
     }
 
     // ─── UPGRADE ─────────────────────────────────────────────────────────────

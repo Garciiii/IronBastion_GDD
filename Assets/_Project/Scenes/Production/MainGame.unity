@@ -3046,9 +3046,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: IronBastion::WaveManager
   waves:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: a962207e16c1f72448efd941f6062a93, type: 2}
+  - {fileID: 11400000, guid: 0a4c84990268c77429077a9c99e8c158, type: 2}
+  - {fileID: 11400000, guid: d3c624f204c152f49bb23b49916a323b, type: 2}
   timeBetweenWaves: 12
 --- !u!4 &97993237
 Transform:
